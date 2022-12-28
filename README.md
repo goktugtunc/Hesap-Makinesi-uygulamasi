@@ -3,6 +3,6 @@
 - İlk uygulamam olduğu için yalnızca mantığını kavramaya çalıştım ve bir kaç bug giderdim.
 - İlginiz için teşekkür ederim.
 ## Uygulamadan Resimler
-![Uygulama genel arayüzü](./anaekran.png | width=100)
-![Uygulamanın genel işleyişi](./isleyis.png | width=100)
-![sayi / 0 bugu çözümü](./sifirbug.png | width=100)
+![Uygulama genel arayüzü](./anaekran.png)
+![Uygulamanın genel işleyişi](./isleyis.png)
+![sayi / 0 bugu çözümü](./sifirbug.png)
