@@ -10,35 +10,36 @@
         android:id="@+id/sayi1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="1. sayıyı girin"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/sayi2"
-        app:layout_constraintStart_toStartOf="@+id/sayi2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/sayi2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="2. sayıyı girin"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sayi1" />
 
     <TextView
         android:id="@+id/sonuc"
         android:layout_width="151dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="228dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="200dp"
         android:text="Sonucunuz burada görünecektir!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,13 +48,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="280dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="52dp"
+        android:layout_width="285dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="12dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/sonuc"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sayi2"
         app:layout_constraintVertical_bias="0.473">
 
@@ -68,6 +69,8 @@
             android:id="@+id/cikarma"
             android:layout_width="67dp"
             android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:onClick="cikarma"
             android:text="-" />
 
@@ -75,6 +78,7 @@
             android:id="@+id/carpma"
             android:layout_width="67dp"
             android:layout_height="48dp"
+            android:layout_marginRight="5dp"
             android:onClick="carpma"
             android:text="*" />
 
