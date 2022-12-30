@@ -21,6 +21,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="UYARI : karekök, sin, cos, tan, cot, ln işlemlerinde yalnızca ilk sayı girişi yapınız!"
+        android:textColor="#FF0000"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@id/sayi1"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <EditText
         android:id="@+id/sayi2"
         android:layout_width="wrap_content"
@@ -37,22 +50,138 @@
 
     <TextView
         android:id="@+id/sonuc"
-        android:layout_width="151dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="200dp"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="120dp"
         android:text="Sonucunuz burada görünecektir!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linear4" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="285dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="12dp"
+        android:id="@+id/linear2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/sonuc"
+        app:flow_verticalBias="0.473"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@id/linear3">
+
+        <Button
+            android:id="@+id/karekok"
+            android:layout_width="67dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="5dp"
+            android:onClick="karekok"
+            android:text="√" />
+
+        <Button
+            android:id="@+id/mod"
+            android:layout_width="67dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="5dp"
+            android:onClick="mod"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/log"
+            android:layout_width="67dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="5dp"
+            android:onClick="log"
+            android:text="log"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/us"
+            android:layout_width="67dp"
+            android:layout_height="48dp"
+            android:onClick="us"
+            android:text="Üs"
+            app:layout_editor_absoluteX="144dp"
+            app:layout_editor_absoluteY="0dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintBottom_toTopOf="@id/linear4"
+        app:layout_constraintTop_toBottomOf="@+id/linear2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.473">
+
+        <Button
+            android:id="@+id/sin"
+            android:layout_width="67dp"
+            android:layout_height="48dp"
+            android:onClick="sin"
+            android:text="sin" />
+
+
+        <Button
+            android:id="@+id/cos"
+            android:layout_width="67dp"
+            android:layout_height="48dp"
+            android:onClick="cos"
+            android:text="cos"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:id="@+id/tan"
+            android:layout_width="67dp"
+            android:layout_height="48dp"
+            android:text="tan"
+            android:onClick="tan"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:id="@+id/cot"
+            android:layout_width="67dp"
+            android:layout_height="48dp"
+            android:text="cot"
+            android:layout_marginLeft="5dp"
+            android:onClick="cot"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/linear3"
+        app:layout_constraintBottom_toTopOf="@id/sonuc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.473"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="-10dp">
+
+        <Button
+            android:id="@+id/ln"
+            android:layout_width="67dp"
+            android:layout_height="48dp"
+            android:text="ln"
+            android:onClick="ln"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linear2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sayi2"
@@ -88,6 +217,9 @@
             android:layout_height="48dp"
             android:onClick="bolme"
             android:text="/" />
+
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
